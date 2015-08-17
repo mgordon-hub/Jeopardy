@@ -197,14 +197,41 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\DoubleJeopardyQuestionsController.cs" />
+    <Compile Include="Controllers\FinalJeopardyQuestionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JeopardyQuestionsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201508162005416_initialCommit.cs" />
+    <Compile Include="Migrations\201508162005416_initialCommit.Designer.cs">
+      <DependentUpon>201508162005416_initialCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508162108079_fixError.cs" />
+    <Compile Include="Migrations\201508162108079_fixError.Designer.cs">
+      <DependentUpon>201508162108079_fixError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508162210423_addedCategoryIdToQuestionModels.cs" />
+    <Compile Include="Migrations\201508162210423_addedCategoryIdToQuestionModels.Designer.cs">
+      <DependentUpon>201508162210423_addedCategoryIdToQuestionModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201508162249536_removedCategoryFromQuestion.cs" />
+    <Compile Include="Migrations\201508162249536_removedCategoryFromQuestion.Designer.cs">
+      <DependentUpon>201508162249536_removedCategoryFromQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryViewModel.cs" />
+    <Compile Include="Models\DoubleJeopardyQuestion.cs" />
+    <Compile Include="Models\FinalJeopardyQuestion.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JeopardyDB.cs" />
+    <Compile Include="Models\JeopardyQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -250,7 +277,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -276,6 +305,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508162005416_initialCommit.resx">
+      <DependentUpon>201508162005416_initialCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508162108079_fixError.resx">
+      <DependentUpon>201508162108079_fixError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508162210423_addedCategoryIdToQuestionModels.resx">
+      <DependentUpon>201508162210423_addedCategoryIdToQuestionModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201508162249536_removedCategoryFromQuestion.resx">
+      <DependentUpon>201508162249536_removedCategoryFromQuestion.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
